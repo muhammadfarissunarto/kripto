@@ -29,7 +29,6 @@ class Record(models.Model):
         shift = 3  # Shift value for the Caesar cipher
         self.name = self.encrypt(self.name, shift)
         self.email = self.encrypt(self.email, shift)
-        self.phone = self.encrypt(self.phone, shift)
         self.address = self.encrypt(self.address, shift)
         super().save(*args, **kwargs)
-    
+
