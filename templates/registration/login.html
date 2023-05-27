@@ -1,4 +1,7 @@
 {% load static %}
+{% if user.is_authenticated %}
+    <script>window.location.href = '/';</script>
+{% else %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>CRM - Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %} " rel="stylesheet" type="text/css">
@@ -70,6 +73,9 @@
                                         </a> -->
                                     </form>
                                     <hr>
+                                    <br>
+                                    <br>
+                                    
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
@@ -101,3 +107,4 @@
 
 </body>
 </html>
+{% endif %}

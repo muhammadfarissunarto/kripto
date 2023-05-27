@@ -24,6 +24,7 @@ class Record(models.Model):
                 encrypted_text += char
         return encrypted_text
 
+
     def save(self, *args, **kwargs):
         # Encrypt the fields before saving
         shift = 3  # Shift value for the Caesar cipher

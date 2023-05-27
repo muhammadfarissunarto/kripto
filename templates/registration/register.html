@@ -1,4 +1,7 @@
 {% load static %}
+{% if user.is_authenticated %}
+    <script>window.location.href = '/';</script>
+{% else %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +75,9 @@
                                     <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
                                 </a> -->
                             </form>
-                            <hr>
+                            <br>
+                            <br>
+                            <br>
                             <div class="text-center">
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
@@ -103,5 +108,5 @@
     </form> -->
 
 </body>
-
 </html>
+{% endif %}
