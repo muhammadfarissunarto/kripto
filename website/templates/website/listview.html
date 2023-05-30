@@ -210,8 +210,9 @@
                                             <th>Phone</th>
                                             <th>Address</th>
                                             <th>City</th>
-                                            <th>Zipcode</th>
+                                            <!-- <th>Zipcode</th> -->
                                             <th>id</th>
+                                            <th>Delete</th>
                                           </tr>
                                     </thead>
                                     <tfoot>
@@ -221,20 +222,23 @@
                                             <th>Phone</th>
                                             <th>Address</th>
                                             <th>City</th>
-                                            <th>Zipcode</th>
+                                            <!-- <th>Zipcode</th> -->
                                             <th>id</th>
+                                            <th>Delete</th>
                                           </tr>
                                     </tfoot>
                                     <tbody>
                                         {% for Record in records  %}
                                             <tr>
-                                                <td><a href="update/{{ Record.id }}">{{ Record.name }}</a></td>
+                                                <!-- <td><a href="update/{{ Record.id }}">{{ Record.name }}</a></td> -->
+                                                <td>{{ Record.name }}</td>
                                                 <td>{{ Record.email }}</td>
                                                 <td>{{ Record.phone }}</td>
                                                 <td>{{ Record.address }}</td>
                                                 <td>{{ Record.city }}</td>
-                                                <td>{{ Record.zipcode }}</td>
+                                                <!-- <td>{{ Record.zipcode }}</td> -->
                                                 <td>{{ Record.id }}</td>
+                                                <th><a href="delete/{{ Record.id }}" class="btn btn-danger">Delete</a></th>
                                             </tr>
                                         {% endfor %}     
                                     </tbody>

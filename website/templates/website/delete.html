@@ -10,42 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CRM - Update</title>
+    <title>CRM - ADD</title>
 
-    <style>
-                    form {
-                /* Add some spacing and alignment */
-                margin: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
 
-            input[type="text"], select {
-                /* Style input fields and select dropdown */
-                width: 300px;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
 
-            button {
-                /* Style the submit button */
-                padding: 10px 20px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            button:hover {
-                /* Add hover effect to the button */
-                background-color: #45a049;
-            }
-
-    </style>
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -212,12 +180,13 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Edit Customer Data</h1>
                     <form method="post">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit">Create</button>
+                        <input type="submit" value="Delete" class="btn btn-danger">
                     </form>
+                    <a href="/" class="btn btn-success btn-circle btn-lg">
+                        <i class="fas fa-check">canceled</i>
+                    </a>
 
 
                 </div>
